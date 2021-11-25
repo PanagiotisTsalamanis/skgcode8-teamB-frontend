@@ -1,4 +1,9 @@
 <resources>
-    <string name="app_name">skgcode-teamb</string>
-    <string name="app_name">skgcode-teamdenkanoumetpt</string>
+    <string name="app_name">Health App</string>
+
+    <string name="prompt_amka">Health identification number</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+
+
 </resources>
