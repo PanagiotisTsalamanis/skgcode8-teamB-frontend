@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/drawable/btn_passwords.xml" value="0.2203125" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/drawable/btn_signup.xml" value="0.2203125" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/drawable/grand_background.xml" value="0.2203125" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/drawable/grandbackground.xml" value="0.2203125" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/drawable/linear.xml" value="0.2203125" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/drawable/medical_logo.xml" value="0.2203125" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/activity_main_sign_up.xml" value="0.19157608695652173" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/activity_sign_up.xml" value="0.5" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/gradient.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/pass_background.xml" value="0.2033514492753623" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
       </map>

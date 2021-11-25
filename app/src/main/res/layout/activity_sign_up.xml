@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp"
+    android:background="@drawable/grand_background">
+
+    <TextView
+        android:id="@+id/AlreadyAMember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Already a Member?"
+        android:textColor="#CFD0D0"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="90dp"
+        android:layout_height="35dp"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Log In"
+        tools:layout_editor_absoluteX="243dp"
+        tools:layout_editor_absoluteY="693dp" />
+
+    <Button
+        android:id="@+id/SignUp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/btn_signup"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:backgroundTint="#3E54C9"
+        app:layout_constraintBottom_toTopOf="@+id/AlreadyAMember"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <CheckBox
+        android:id="@+id/I_Read_and_Accept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:buttonTint="@color/white"
+        android:fontFamily="@font/poppins_medium"
+        android:minHeight="48dp"
+        android:text="I Read and Accept the Terms and conditions"
+        android:textColor="#CFD0D0"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/SignUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/ConfirmPassword"
+        android:layout_width="370dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_passwords"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="                     Confirm Password"
+        android:includeFontPadding="false"
+        android:inputType="textPassword"
+        android:textColor="#4D4C4C"
+        app:layout_constraintBottom_toTopOf="@+id/I_Read_and_Accept"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="370dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/btn_passwords"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="                           Password"
+        android:inputType="textPassword"
+        android:textColor="#4D4C4C"
+        app:layout_constraintBottom_toTopOf="@+id/ConfirmPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNumberPassword"
+        android:layout_width="370dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/btn_passwords"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="                              ΑΜΚΑ"
+        android:inputType="numberPassword"
+        android:textColor="#4D4C4C"
+        app:layout_constraintBottom_toTopOf="@+id/Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/FullName_SignUp"
+        android:layout_width="370dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/btn_passwords"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:inputType="textPersonName"
+        android:text="                            Full Name"
+        android:textColor="#4D4C4C"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumberPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/BookAndManage_Text"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="  Book \u0026 manage your medical appointments "
+        android:textColor="#E3EAF1"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/FullName_SignUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/MedicalLogo"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/BookAndManage_Text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/medical_logo_png" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
