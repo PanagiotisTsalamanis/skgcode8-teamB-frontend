@@ -3,6 +3,33 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/drawable/btn_onwelcome.xml" value="0.2203125" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/drawable/btn_passwords.xml" value="0.2203125" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/drawable/btn_signup.xml" value="0.2203125" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/drawable/grand_background.xml" value="0.2203125" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/activity_book_an_appoint.xml" value="0.33" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/activity_home_pa.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/activity_homepage.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/activity_login.xml" value="0.15" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/activity_main.xml" value="0.12545289855072464" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/activity_navigation_menu.xml" value="0.18" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/activity_sign_up.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/activity_user_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/activity_welcome_screen.xml" value="0.22" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/containt_main.xml" value="0.21" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/fragment_appointments.xml" value="0.12681159420289856" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/fragment_blank.xml" value="0.12047101449275362" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/fragment_diagnoses.xml" value="0.12681159420289856" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/fragment_home.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/fragment_log_out.xml" value="0.12681159420289856" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/fragment_logout.xml" value="0.12681159420289856" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/fragment_prescripti.xml" value="0.12047101449275362" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/fragment_prescriptions.xml" value="0.12681159420289856" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/fragment_scedule_app.xml" value="0.12681159420289856" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/fragment_user_profile.xml" value="0.16" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/nav_header.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/layout/navigationheader.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/stath/AndroidStudioProjects/skgcode8-teamB-frontend/app/src/main/res/menu/nav_menu.xml" value="0.33" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/drawable/btn_bg_1.xml" value="0.1890625" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/drawable/btn_signup.xml" value="0.2703125" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/drawable/custom_input.xml" value="0.2703125" />

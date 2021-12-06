@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    android:background="#0E4577">
+
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/Home"
+        android:iconColor="#FFFFFF"
+        android:title="Home"
+        android:fontFamily="@font/poppins"/>
+
+    <item
+        android:id="@+id/nav_UserProfile"
+        android:icon="@drawable/Vector"
+        android:iconColor="#FFFFFF"
+        android:title="User Profile"
+        android:fontFamily="@font/poppins"/>
+
+
+    <item android:title="Services">
+        android:fontFamily="@font/poppins"
+
+        <menu>
+
+            <item
+                android:id="@+id/nav_Prescriptions"
+                android:icon="@drawable/Document"
+                android:iconColor="#FFFFFF"
+                android:title="Prescriptions"
+                android:fontFamily="@font/poppins"/>
+
+            <item
+                android:id="@+id/nav_Diagnoses"
+                android:icon="@drawable/Stethoscope"
+                android:iconColor="#FFFFFF"
+                android:title="Diagnoses"
+                android:fontFamily="@font/poppins"/>
+
+            <item
+                android:id="@+id/nav_Appointments"
+                android:icon="@drawable/Health"
+                android:iconColor="#FFFFFF"
+                android:title="Appointments"
+                android:fontFamily="@font/poppins"/>
+
+            <item
+                android:id="@+id/nav_Schedule_Appointments"
+                android:icon="@drawable/Calendar"
+                android:iconColor="#FFFFFF"
+                android:title="Schedule Appointments"
+                android:fontFamily="@font/poppins"/>
+        </menu>
+    </item>
+
+
+
+
+    <item
+        android:id="@+id/nav_LogOut"
+        android:icon="@drawable/log_out"
+        android:iconColor="#FFFFFF"
+        android:title="Log Out"
+        android:fontFamily="@font/poppins"/>
+
+
+</menu>
