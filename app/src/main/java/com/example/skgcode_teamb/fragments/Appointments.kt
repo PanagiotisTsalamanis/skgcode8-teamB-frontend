@@ -10,6 +10,7 @@ import com.example.skgcode_teamb.R
 
 class Appointments : Fragment() {
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

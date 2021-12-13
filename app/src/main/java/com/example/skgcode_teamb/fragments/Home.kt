@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.skgcode_teamb.R
+import com.example.skgcode_teamb.databinding.FragmentHomeBinding
 
 
 class Home : Fragment() {

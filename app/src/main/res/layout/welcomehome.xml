@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".activities.WelcomeScreen">
+    tools:context=".fragments.Home">
 
     <TextView
         android:id="@+id/textView4"
@@ -28,7 +28,7 @@
         android:layout_height="75dp"
         android:layout_marginBottom="26dp"
         android:background="@drawable/btn_passwords"
-        android:drawableRight="@drawable/Document"
+        android:drawableRight="@drawable/docum"
         android:ems="10"
         android:fontFamily="@font/poppins_medium"
         android:shadowColor="#0E4577"
@@ -45,7 +45,7 @@
         android:layout_height="75dp"
         android:layout_marginBottom="26dp"
         android:background="@drawable/btn_passwords"
-        android:drawableRight="@drawable/Stethoscope"
+        android:drawableRight="@drawable/scope"
         android:ems="10"
         android:fontFamily="@font/poppins_medium"
         android:shadowColor="#0E4577"
@@ -62,7 +62,7 @@
         android:layout_height="75dp"
         android:layout_marginBottom="26dp"
         android:background="@drawable/btn_passwords"
-        android:drawableRight="@drawable/Health"
+        android:drawableRight="@drawable/healt"
         android:ems="10"
         android:fontFamily="@font/poppins_medium"
         android:shadowColor="#0E4577"
@@ -79,7 +79,7 @@
         android:layout_height="75dp"
         android:layout_marginBottom="26dp"
         android:background="@drawable/btn_passwords"
-        android:drawableRight="@drawable/Calendar"
+        android:drawableRight="@drawable/calenda"
         android:ems="10"
         android:fontFamily="@font/poppins_medium"
         android:shadowColor="#0E4577"
@@ -96,7 +96,7 @@
         android:layout_height="75dp"
         android:layout_marginBottom="55dp"
         android:background="@drawable/btn_passwords"
-        android:drawableRight="@drawable/Vector"
+        android:drawableRight="@drawable/vecto"
         android:ems="10"
         android:fontFamily="@font/poppins_medium"
         android:shadowColor="#0E4577"

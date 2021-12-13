@@ -7,23 +7,30 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.example.skgcode_teamb.R
+import com.example.skgcode_teamb.databinding.ActivityHomePaBinding
 import com.example.skgcode_teamb.fragments.*
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.activity_home_pa.*
-import kotlinx.android.synthetic.main.containt_main.*
+
 
 class HomePa : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
+
+
+    private var _binding: ActivityHomePaBinding? = null
+    private val binding get() = _binding!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home_pa)
-        setSupportActionBar(toolbar)
+        _binding= ActivityHomePaBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+        setSupportActionBar(binding.contentMain.toolbar)
 
-        val toggle = ActionBarDrawerToggle(this,drawer,toolbar, R.string.open, R.string.close)
+        val toggle = ActionBarDrawerToggle(this,binding.drawerLayout,binding.contentMain.toolbar, R.string.open, R.string.close)
         toggle.isDrawerIndicatorEnabled = true
-        drawer.addDrawerListener(toggle)
+        binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        navigation_menu.setNavigationItemSelectedListener(this)
+        binding.navMenu.setNavigationItemSelectedListener(this)
 
         setToolbarTitle("Home")
         changeFragment(Home())
@@ -31,7 +38,7 @@ class HomePa : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListen
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        drawer.closeDrawer(GravityCompat.START)
+        binding.drawerLayout.closeDrawer(GravityCompat.START)
 
         when(item.itemId){
             R.id.nav_home -> {

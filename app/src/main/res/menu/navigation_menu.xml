@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@drawable/homee"
+        android:fontFamily="@font/poppins"/>
+
+    <item
+        android:id="@+id/nav_UserProfile"
+        android:title="User Profile"
+        android:icon="@drawable/vecto"
+        android:fontFamily="@font/poppins"/>
+
+    <item
+        android:id="@+id/nav_Prescriptions"
+        android:icon="@drawable/docum"
+        android:title="Prescriptions"
+        android:fontFamily="@font/poppins"/>
+
+    <item
+        android:id="@+id/nav_Diagnoses"
+        android:icon="@drawable/scope"
+        android:title="Diagnoses"
+        android:fontFamily="@font/poppins"/>
+
+    <item
+        android:id="@+id/nav_Appointments"
+        android:icon="@drawable/healt"
+        android:title="Appointments"
+        android:fontFamily="@font/poppins"/>
+
+    <item
+        android:id="@+id/nav_Schedule_Appointments"
+        android:icon="@drawable/calenda"
+        android:title="Schedule Appointments"
+        android:fontFamily="@font/poppins"/>
+
+    <item
+        android:id="@+id/nav_LogOut"
+        android:icon="@drawable/log_out"
+        android:title="Log Out"
+        android:fontFamily="@font/poppins"/>
+
+</menu>
