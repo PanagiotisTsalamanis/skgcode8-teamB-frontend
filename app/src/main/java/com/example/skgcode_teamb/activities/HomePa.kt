@@ -1,5 +1,6 @@
 package com.example.skgcode_teamb.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.example.skgcode_teamb.R
 import com.example.skgcode_teamb.databinding.ActivityHomePaBinding
 import com.example.skgcode_teamb.fragments.*
+import com.example.skgcode_teamb.storage.SessionManager
 import com.google.android.material.navigation.NavigationView
 
 
@@ -36,6 +38,8 @@ class HomePa : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListen
         changeFragment(Home())
 
     }
+
+    val sessionManager = SessionManager(this)
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         binding.drawerLayout.closeDrawer(GravityCompat.START)
@@ -72,8 +76,25 @@ class HomePa : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListen
             }
 
             R.id.nav_LogOut -> {
-                setToolbarTitle("Log Out")
-                changeFragment(Logout())
+                //setToolbarTitle("Log Out")
+                //changeFragment(Logout())
+
+                    // Clear session details
+                    sessionManager.clearSession()
+
+                    // After clear session details, redirect user to LoginActivity
+                    val intent = Intent(this, LoginActivity::class.java)
+
+                    // Closing all the Activities
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+
+                    // Add new flag to start new Activity
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+
+                    // Staring Login Activity
+                    startActivity(intent)
+                    finish()
+
             }
 
         }

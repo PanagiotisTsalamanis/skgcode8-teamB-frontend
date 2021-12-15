@@ -59,7 +59,7 @@ class LoginActivity : AppCompatActivity() {
                         sessionManager.createSession(response.body()!!)
 
                         // Finish login activity and redirect user to welcome screen
-                        val intent = Intent(this@LoginActivity, ProfileActivity::class.java)
+                        val intent = Intent(this@LoginActivity, HomePa::class.java)
                         startActivity(intent)
                         finish()
 
@@ -123,7 +123,7 @@ class LoginActivity : AppCompatActivity() {
 
         // If user is already logged in, redirect them to Profile Activity
         if(SessionManager(this).isLoggedIn) {
-            val intent = Intent(this@LoginActivity, ProfileActivity::class.java)
+            val intent = Intent(this@LoginActivity, HomePa::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
