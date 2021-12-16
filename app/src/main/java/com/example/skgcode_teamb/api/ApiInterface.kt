@@ -3,10 +3,7 @@ package com.example.skgcode_teamb.api
 import android.text.Html
 import com.example.skgcode_teamb.models.*
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.Header
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface ApiInterface {
 
@@ -27,6 +24,20 @@ interface ApiInterface {
     fun userProfile(
         @Header("Authorization") token: String
     ): Call<ProfileResponse>
+
+    // Profile update: https://skgcode8-teamb-backend.herokuapp.com/profile
+    @PUT("profile")
+    fun userProfileUpdate(
+        @Header("Authorization") token: String,
+        @Body profileUpdateRequest: ProfileUpdateRequest
+    ): Call<ProfileUpdateResponse>
+
+    // Password Change: https://skgcode8-teamb-backend.herokuapp.com/profile
+    @PUT("profile")
+    fun userPasswordUpdate(
+        @Header("Authorization") token: String,
+        @Body passwordUpdateRequest: PasswordUpdateRequest
+    ): Call<ProfileUpdateResponse>
 
     // Prescriptions: https://skgcode8-teamb-backend.herokuapp.com/services/prescriptions
     @GET("services/prescriptions")

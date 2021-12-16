@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.example.skgcode_teamb.R
 import com.example.skgcode_teamb.models.LoginResponse
+import com.example.skgcode_teamb.models.ProfileUpdateRequest
 
 /**
  * Session manager to save and fetch data from SharedPreferences
@@ -55,6 +56,26 @@ class SessionManager (var context: Context?) {
         // Apply changes
         editor.apply()
     }
+
+
+    fun updateSession(profileUpdateRequest: ProfileUpdateRequest) {
+
+        // Editor for Share Preferences
+        val editor = prefs.edit()
+
+        // Updating user data in pref
+        editor.putString(HEALTH_ID, profileUpdateRequest.healthIdNumber)
+        editor.putString(FIRST_NAME, profileUpdateRequest.firstName)
+        editor.putString(LAST_NAME, profileUpdateRequest.lastName)
+        editor.putString(EMAIL, profileUpdateRequest.email)
+        editor.putString(PHONE_NUMBER, profileUpdateRequest.phoneNumber)
+        editor.putString(BIRTH_DATE, profileUpdateRequest.birthDate)
+        editor.putString(BLOOD_TYPE, profileUpdateRequest.bloodType)
+
+        // Apply changes
+        editor.apply()
+    }
+
 
     /**
      * Create login session
