@@ -34,4 +34,16 @@ interface ApiInterface {
         @Header("Authorization") token: String
     ): Call<List<Prescription>>
 
+    // Appointments history: https://skgcode8-teamb-backend.herokuapp.com/services/appointments
+    @GET("appointments")
+    fun userAppointments(
+        @Header("Authorization") token: String
+    ): Call<List<Appointments>>
+
+    // All hospitals: https://skgcode8-teamb-backend.herokuapp.com/hospitals
+    @GET("hospitals")
+    fun hospitals(
+        @Header("Authorization") token: String
+    ): Call<List<Hospitals>>
+
 }

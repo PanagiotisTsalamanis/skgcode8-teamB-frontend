@@ -9,8 +9,8 @@ data class User(
     val bloodType: String,
     @SerializedName("email")
     val email: String,
-    @SerializedName("familyDoctorId")
-    val familyDoctorId: String,
+    @SerializedName("familyDoctor")
+    val familyDoctor: Doctor,
     @SerializedName("firstName")
     val firstName: String,
     @SerializedName("healthIdNumber")

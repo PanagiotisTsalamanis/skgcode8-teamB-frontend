@@ -39,9 +39,8 @@ class HomePa : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListen
 
     }
 
-    val sessionManager = SessionManager(this)
-
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        val sessionManager = SessionManager(this)
         binding.drawerLayout.closeDrawer(GravityCompat.START)
 
         when(item.itemId){

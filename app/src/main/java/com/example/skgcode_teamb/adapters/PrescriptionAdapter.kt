@@ -16,25 +16,27 @@ import java.util.*
 class PrescriptionAdapter(
     val prescriptions: List<Prescription>,
     val listener: OnItemClickListener):
-    RecyclerView.Adapter<PrescriptionAdapter.MoviesViewHolder>() {
+    RecyclerView.Adapter<PrescriptionAdapter.PrescriptionsViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PrescriptionsViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.row_item_prescription, parent, false)
-        return MoviesViewHolder(view)
+        return PrescriptionsViewHolder(view)
     }
 
     override fun getItemCount(): Int {
         return prescriptions.size
     }
 
-    override fun onBindViewHolder(holder: MoviesViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: PrescriptionsViewHolder, position: Int) {
         return holder.bind(prescriptions[position])
     }
 
-    inner class MoviesViewHolder(itemView : View): RecyclerView.ViewHolder(itemView), View.OnClickListener {
+    inner class PrescriptionsViewHolder(itemView : View): RecyclerView.ViewHolder(itemView), View.OnClickListener {
         private val date:TextView = itemView.findViewById(R.id.PerIssueDate)
         private val title:TextView = itemView.findViewById(R.id.PerTittle)
         private val description:TextView = itemView.findViewById(R.id.PerDescription)
+        private val drugCode:TextView = itemView.findViewById(R.id.PerDrugCode)
+        private val doctor:TextView = itemView.findViewById(R.id.PerDoctor)
         private val btnShare:Button = itemView.findViewById(R.id.PerShareBtn)
 
         fun bind(prescription: Prescription) {
@@ -46,8 +48,8 @@ class PrescriptionAdapter(
             date.text = formattedDate
             title.text = prescription.title
             description.text = prescription.description
-
-            val perSum = "Issue Date: ${date.text}" + "\n" + "Title: ${title.text}" + "\n" + "Description: ${description.text}"
+            drugCode.text = prescription.drugCode
+            doctor.text = prescription.doctor.firstName + " " + prescription.doctor.lastName
         }
 
         init {

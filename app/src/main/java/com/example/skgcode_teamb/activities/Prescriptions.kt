@@ -5,8 +5,6 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,11 +14,9 @@ import com.example.skgcode_teamb.api.RetrofitClient
 import com.example.skgcode_teamb.models.Prescription
 import com.example.skgcode_teamb.storage.SessionManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import org.w3c.dom.Text
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.lang.StringBuilder
 import java.text.SimpleDateFormat
 import java.util.*
 

@@ -15,5 +15,9 @@ data class Prescription(
     @SerializedName("userId")
     val userId: String,
     @SerializedName("__v")
-    val v: Int
+    val v: Int,
+    @SerializedName("doctor")
+    val doctor: Doctor,
+    @SerializedName("drugCode")
+    val drugCode: String
 )

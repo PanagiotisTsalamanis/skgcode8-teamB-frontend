@@ -74,6 +74,7 @@
                             android:textSize="12dp"/>
 
                         <TextView
+                            android:id="@+id/PerDrugCode"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="5675116"
@@ -140,6 +141,7 @@
                             android:textSize="12dp"/>
 
                         <TextView
+                            android:id="@+id/PerDoctor"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Alexandros Ioannidis"

@@ -10,5 +10,6 @@ data class SessionUserDetails (
     val phoneNumber: String?,
     val birthDate: String?,
     val bloodType: String?,
-    val familyDoctorId: String?
+    val familyDoctorId: String?,
+    val familyDoctorName: String?
 )
