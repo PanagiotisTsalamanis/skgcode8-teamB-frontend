@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Health App</string>
+    <string name="app_name">DocFinder</string>
 
     <string name="prompt_amka">Health identification number</string>
     <string name="prompt_password">Password</string>
