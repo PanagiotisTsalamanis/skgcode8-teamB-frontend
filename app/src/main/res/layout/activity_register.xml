@@ -8,20 +8,31 @@
     android:padding="30dp"
     tools:context=".activities.RegisterActivity">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="177dp"
+        android:layout_height="153dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/main_logo"
+        android:contentDescription="Logo" />
+
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="Register"
+        android:text="Create an account"
         android:textColor="@color/white"
         android:textSize="28sp"
         app:layout_constraintBottom_toTopOf="@+id/HealthIdInput"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/HealthIdInput"
@@ -118,6 +129,11 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="Sign up"
+        app:backgroundTint="#0E4577"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_semibold"
+        android:letterSpacing=".05"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

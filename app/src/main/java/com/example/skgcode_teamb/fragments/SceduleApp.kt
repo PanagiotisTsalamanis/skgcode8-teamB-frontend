@@ -46,8 +46,6 @@ class SceduleApp : Fragment() {
 
     private var timeSelection : Int? = null
 
-    private var readyToSchedule : Boolean = false
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -192,7 +190,7 @@ class SceduleApp : Fragment() {
                     if (statusCode == 200) {
                         val responseBody = response.body()!!
 
-                        Toast.makeText(requireContext(), "Your appointment has been scheduled successfully.", Toast.LENGTH_LONG).show()
+                        Toast.makeText(requireContext(), "Your appointment has been scheduled with doctor: ${responseBody.appointment.doctor.firstName} ${responseBody.appointment.doctor.lastName}.", Toast.LENGTH_LONG).show()
 
                         Log.d("ScheduleAppointment", "Success Appointment: $responseBody")
 
@@ -226,13 +224,12 @@ class SceduleApp : Fragment() {
 
                     if (statusCode == 200) {
                         Log.d("BookAppointment", "Success: $statusCode")
-                        Toast.makeText(requireContext(), "You can choose time", Toast.LENGTH_LONG).show()
+
 
                         val responseBody = response.body()!!
 
                         Log.d("ScheduleFragment", "Availability: $responseBody")
 
-                        //timeList.setEnabled(true)
 
                         responseBody.forEach{
                             availableHours.add(it)
@@ -242,8 +239,6 @@ class SceduleApp : Fragment() {
                         val formatter = SimpleDateFormat("h:mm a")
                         formatter.timeZone = TimeZone.getTimeZone("UTC")
 
-                        //val singleChange = formatter.format(parser.parse(availableHours[2]))
-                        //Log.d("ScheduleAppointment", "Single change: ${availableHours[2]}, $singleChange")
 
                         responseBody.forEach {
                             availableHoursFormatted.add(formatter.format(parser.parse(it)))
@@ -251,9 +246,6 @@ class SceduleApp : Fragment() {
 
 
                         Log.d("ScheduleFragment", "Formatted time: $availableHoursFormatted")
-
-
-
                         Log.d("ScheduleFragment", "Availability: $availableHours")
 
 
@@ -302,9 +294,10 @@ class SceduleApp : Fragment() {
 
                          */
 
+                    } else if (statusCode == 400) {
+                        Toast.makeText( requireContext(), "Pick a date beginning from tomorrow.", Toast.LENGTH_LONG).show()
                     } else {
-                        Log.d("BookAppointment", "Success or not: $statusCode")
-                        Toast.makeText( requireContext(), "No time available", Toast.LENGTH_LONG).show()
+                        Toast.makeText( requireContext(), "No time available.", Toast.LENGTH_LONG).show()
                     }
 
 

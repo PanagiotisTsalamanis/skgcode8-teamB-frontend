@@ -3,13 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/drawable/appointment.xml" value="0.2703125" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/drawable/btn_bg_1.xml" value="0.1890625" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/drawable/btn_signup.xml" value="0.2703125" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/drawable/calendar.xml" value="0.2703125" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/drawable/custom_input.xml" value="0.2703125" />
+        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/drawable/diagnosis.xml" value="0.2703125" />
+        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/drawable/document.xml" value="0.2703125" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/drawable/gradient_bg.xml" value="0.2703125" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/drawable/ic_baseline_calendar_today_24.xml" value="0.2703125" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/drawable/user.xml" value="0.2703125" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/activity_home.xml" value="0.22056159420289856" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/activity_home_pa.xml" value="0.19655797101449277" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/activity_login.xml" value="0.264" />
