@@ -152,7 +152,7 @@ class UserProfile : Fragment() {
 
             val apiCall = RetrofitClient.getRetrofitInstance.userProfileUpdate(
                 token = "JWT ${sessionManager.fetchAuthToken()}",
-                profileUpdateRequest = ProfileUpdateRequest(healthIdNumber, firstName, lastName, email, phoneNumber, birthDate, bloodType, Doctor(familyDoctorId, familyDoctorFirstName, familyDoctorLastName))
+                profileUpdateRequest = ProfileUpdateRequest(healthIdNumber, firstName, lastName, email, phoneNumber, birthDate, bloodType, Doctor(familyDoctorId!!, familyDoctorFirstName!!, familyDoctorLastName!!))
             )
 
             apiCall.enqueue(object : Callback<ProfileUpdateResponse> {
@@ -164,7 +164,7 @@ class UserProfile : Fragment() {
 
                     if (statusCode == 200) {
                         // Update session date
-                        sessionManager.updateSession(ProfileUpdateRequest(healthIdNumber, firstName, lastName, email, phoneNumber, birthDate, bloodType, Doctor(familyDoctorId, familyDoctorFirstName, familyDoctorLastName)))
+                        sessionManager.updateSession(ProfileUpdateRequest(healthIdNumber, firstName, lastName, email, phoneNumber, birthDate, bloodType, Doctor(familyDoctorId!!, familyDoctorFirstName!!, familyDoctorLastName!!)))
 
                         // Show toast message to user
                         Toast.makeText(requireContext(), "Your profile has been updated successfully.", Toast.LENGTH_LONG).show()

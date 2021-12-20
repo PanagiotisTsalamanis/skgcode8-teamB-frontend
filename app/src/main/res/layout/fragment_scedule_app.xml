@@ -1,208 +1,312 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_bg"
+    android:padding="20dp"
     tools:context=".fragments.SceduleApp">
 
-
     <TextView
-        android:id="@+id/textView15"
-        android:layout_width="208dp"
-        android:layout_height="101dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="163dp"
-        android:layout_marginBottom="34dp"
-        android:fontFamily="@font/poppins"
-        android:text="Book An Appointment"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView16"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/userData_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:text="Book an appointment"
+        android:textColor="@color/white"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textSize="28sp"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintBottom_toTopOf="@+id/hospitalInputLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="131dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="264dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="  Hospital"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/hospitalInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/hospitalInputLayout"
-        style="@style/Widget.App.TextInputLayout.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="10dp"
+        android:hint="Hospital"
         app:errorEnabled="true"
-        android:hint="Hospital Name"
-        app:layout_constraintBottom_toTopOf="@+id/textView17"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/departmentInputLayout"
+        android:layout_marginBottom="10dp"
+        app:boxBackgroundColor="#f0f0f0"
+        style="@style/Widget.App.TextInputLayout.ExposedDropdownMenu">
 
         <AutoCompleteTextView
             android:id="@+id/hospitalList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:fontFamily="@font/poppins_medium"
-            android:inputType="none"
-            android:padding="14dp"
-            android:textColor="#B3505050" />
+            android:inputType="none"/>
+
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="131dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="264dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="  Department"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/departmentInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/departmentInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-        android:layout_width="400dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginEnd="4dp"
-        android:hint="Department Name"
-        android:enabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Department"
         app:errorEnabled="true"
-        android:layout_marginBottom="38dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView20"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/dateListInputLayout"
+        android:layout_marginBottom="10dp"
+        app:boxBackgroundColor="#f0f0f0"
+        style="@style/Widget.App.TextInputLayout.ExposedDropdownMenu">
 
         <AutoCompleteTextView
             android:id="@+id/departmentList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:fontFamily="@font/poppins_medium"
-            android:inputType="none"
-            android:padding="14dp"
-            android:textColor="#B3505050" />
+            android:inputType="none"/>
+
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="114dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="133dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="  Date "
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/dateListInputLayout"
-        app:layout_constraintEnd_toStartOf="@+id/textView19"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/dateListInputLayout"
-        android:layout_width="188dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Date"
         app:errorEnabled="true"
-        android:layout_marginStart="7dp"
-        android:layout_marginBottom="57dp"
-        android:hint="Select date"
         app:layout_constraintBottom_toTopOf="@+id/BookAppointment"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="10dp"
+        app:boxBackgroundColor="#f0f0f0"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_baseline_calendar_today_24"
+        style="@style/Widget.App.TextInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/dateList"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
-            android:inputType="none"
-            android:padding="14dp"
-            android:textColor="#B3505050" />
+            android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="114dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginEnd="34dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="  Time "
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/timeInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/departmentInputLayout" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/timeInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-        android:layout_width="188dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="78dp"
-        android:enabled="false"
-        android:hint="Select time"
-        app:layout_constraintBottom_toTopOf="@+id/BookAppointment"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/dateListInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/textView19">
-
-        <AutoCompleteTextView
-            android:id="@+id/timeList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:fontFamily="@font/poppins_medium"
-            android:inputType="none"
-            android:padding="14dp"
-            android:textColor="#B3505050" />
-    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/BookAppointment"
-        android:layout_width="239dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="101dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="87dp"
-        android:background="@drawable/btn_signup"
-        android:text="Book Appointment"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        app:backgroundTint="#0E4577"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search availability"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
+
+
+    <!--
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="208dp"
+            android:layout_height="101dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="163dp"
+            android:layout_marginBottom="34dp"
+            android:fontFamily="@font/poppins"
+            android:text="Book An Appointment"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="131dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="264dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="  Hospital"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/hospitalInputLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/hospitalInputLayout"
+            style="@style/Widget.App.TextInputLayout.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginBottom="10dp"
+            app:errorEnabled="true"
+            android:hint="Hospital Name"
+            app:layout_constraintBottom_toTopOf="@+id/textView17"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <AutoCompleteTextView
+                android:id="@+id/hospitalList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
+                android:inputType="none"
+                android:padding="14dp"
+                android:textColor="#B3505050" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="131dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="264dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="  Department"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/departmentInputLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/departmentInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="400dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="4dp"
+            android:hint="Department Name"
+            android:enabled="false"
+            app:errorEnabled="true"
+            android:layout_marginBottom="38dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <AutoCompleteTextView
+                android:id="@+id/departmentList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
+                android:inputType="none"
+                android:padding="14dp"
+                android:textColor="#B3505050" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="114dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="133dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="  Date "
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/dateListInputLayout"
+            app:layout_constraintEnd_toStartOf="@+id/textView19"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dateListInputLayout"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginBottom="57dp"
+            android:hint="Select date"
+            app:layout_constraintBottom_toTopOf="@+id/BookAppointment"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dateList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:inputType="none"
+                android:padding="14dp"
+                android:textColor="#B3505050" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="114dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="34dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="  Time "
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/timeInputLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/departmentInputLayout" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/timeInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginBottom="78dp"
+            android:hint="Select time"
+            app:layout_constraintBottom_toTopOf="@+id/BookAppointment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dateListInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/textView19">
+
+            <AutoCompleteTextView
+                android:id="@+id/timeList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
+                android:inputType="none"
+                android:padding="14dp"
+                android:textColor="#B3505050" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/BookAppointment"
+            android:layout_width="239dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="101dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="87dp"
+            android:background="@drawable/btn_signup"
+            android:text="Search availability"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:backgroundTint="#0E4577"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+
+
+
+
+
+    -->
 
 
 
@@ -301,4 +405,3 @@
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
-</ScrollView>

@@ -10,7 +10,7 @@ data class User(
     @SerializedName("email")
     val email: String,
     @SerializedName("familyDoctor")
-    val familyDoctor: Doctor,
+    val familyDoctor: Doctor?,
     @SerializedName("firstName")
     val firstName: String,
     @SerializedName("healthIdNumber")

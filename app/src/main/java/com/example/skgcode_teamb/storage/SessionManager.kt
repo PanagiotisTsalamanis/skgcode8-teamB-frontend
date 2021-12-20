@@ -50,9 +50,9 @@ class SessionManager (var context: Context?) {
         editor.putString(PHONE_NUMBER, loginResponse.user.phoneNumber)
         editor.putString(BIRTH_DATE, loginResponse.user.birthDate)
         editor.putString(BLOOD_TYPE, loginResponse.user.bloodType)
-        editor.putString(FAMILY_DOCTOR_ID, loginResponse.user.familyDoctor.id)
-        editor.putString(FAMILY_DOCTOR_FIRST_NAME, loginResponse.user.familyDoctor.firstName)
-        editor.putString(FAMILY_DOCTOR_LAST_NAME, loginResponse.user.familyDoctor.lastName)
+        editor.putString(FAMILY_DOCTOR_ID, loginResponse.user.familyDoctor?.id)
+        editor.putString(FAMILY_DOCTOR_FIRST_NAME, loginResponse.user.familyDoctor?.firstName)
+        editor.putString(FAMILY_DOCTOR_LAST_NAME, loginResponse.user.familyDoctor?.lastName)
 
         // Apply changes
         editor.apply()

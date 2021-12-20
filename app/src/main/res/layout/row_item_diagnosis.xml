@@ -56,73 +56,6 @@
 
                 </LinearLayout>
 
-                <!-- Drug code -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Examination"
-                        android:textAppearance="?attr/textAppearanceBody2"
-                        android:textColor="?android:attr/textColorSecondary"
-                        android:fontFamily="@font/poppins"
-                        android:letterSpacing="0"
-                        android:textSize="12dp"/>
-
-                    <TextView
-                        android:id="@+id/DiagnosisExam"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Examination"
-                        android:textAppearance="?attr/textAppearanceBody1"
-                        android:fontFamily="@font/poppins_medium"
-                        android:letterSpacing="0"
-                        android:textSize="14dp"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!-- Second row -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp">
-
-                <!-- Title -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Results"
-                        android:textAppearance="?attr/textAppearanceBody2"
-                        android:textColor="?android:attr/textColorSecondary"
-                        android:fontFamily="@font/poppins"
-                        android:letterSpacing="0"
-                        android:textSize="12dp"/>
-
-                    <TextView
-                        android:id="@+id/DiagnosisResult"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Results"
-                        android:textAppearance="?attr/textAppearanceBody1"
-                        android:fontFamily="@font/poppins_medium"
-                        android:letterSpacing="0"
-                        android:textSize="14dp"/>
-
-                </LinearLayout>
-
                 <!-- Doctor name -->
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -152,6 +85,77 @@
 
                 </LinearLayout>
 
+
+
+            </LinearLayout>
+
+            <!-- Second row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <!-- Drug code -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Examination"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:fontFamily="@font/poppins"
+                        android:letterSpacing="0"
+                        android:textSize="12dp"/>
+
+                    <TextView
+                        android:id="@+id/DiagnosisExam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Examination"
+                        android:textAppearance="?attr/textAppearanceBody1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:letterSpacing="0"
+                        android:textSize="14dp"/>
+
+                </LinearLayout>
+
+                <!-- Title -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Doctor"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:fontFamily="@font/poppins"
+                        android:letterSpacing="0"
+                        android:textSize="12dp"/>
+
+                    <TextView
+                        android:id="@+id/DiagnosisDoctor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Doctor"
+                        android:textAppearance="?attr/textAppearanceBody1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:letterSpacing="0"
+                        android:textSize="14dp"/>
+
+                </LinearLayout>
+
+
+
             </LinearLayout>
 
             <!-- Third row - Description -->
@@ -164,7 +168,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Doctor"
+                    android:text="Results"
                     android:textAppearance="?attr/textAppearanceBody2"
                     android:textColor="?android:attr/textColorSecondary"
                     android:fontFamily="@font/poppins"
@@ -172,10 +176,10 @@
                     android:textSize="12dp"/>
 
                 <TextView
-                    android:id="@+id/DiagnosisDoctor"
+                    android:id="@+id/DiagnosisResult"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Doctor"
+                    android:text="Results"
                     android:textAppearance="?attr/textAppearanceBody1"
                     android:fontFamily="@font/poppins_medium"
                     android:letterSpacing="0"

@@ -11,7 +11,7 @@ interface ApiInterface {
     @POST("register")
     fun userRegister(
         @Body registerRequest: RegisterRequest
-    ): Call<Html> // isws na iparxei lathos sto Html
+    ): Call<RegisterResponse>
 
     // User Login: https://skgcode8-teamb-backend.herokuapp.com/login
     @POST("login")

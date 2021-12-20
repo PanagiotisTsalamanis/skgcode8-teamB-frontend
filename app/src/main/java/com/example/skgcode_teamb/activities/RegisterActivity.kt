@@ -12,7 +12,9 @@ import com.example.skgcode_teamb.R
 import com.example.skgcode_teamb.api.RetrofitClient
 import com.example.skgcode_teamb.models.LoginRequest
 import com.example.skgcode_teamb.models.RegisterRequest
+import com.example.skgcode_teamb.models.RegisterResponse
 import com.example.skgcode_teamb.utils.InternetConnectivity
+import com.example.skgcode_teamb.utils.compareWith
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
 import retrofit2.Call
@@ -42,13 +44,11 @@ class RegisterActivity : AppCompatActivity() {
 
             val apiCall = RetrofitClient.getRetrofitInstance.userRegister(RegisterRequest(healthIdNumber, email, password))
 
-            apiCall.enqueue(object: Callback<Html> {
-                override fun onFailure(call: Call<Html>, t: Throwable) {
-                    Log.d("RegisterActivity","Failed Register: ${t.message}")
-                    Toast.makeText(this@RegisterActivity, t.message, Toast.LENGTH_LONG).show()
-                }
-
-                override fun onResponse(call: Call<Html>, response: Response<Html>) {
+            apiCall.enqueue(object : Callback<RegisterResponse?> {
+                override fun onResponse(
+                    call: Call<RegisterResponse?>,
+                    response: Response<RegisterResponse?>
+                ) {
                     val statusCode = response.raw().code()
 
                     if (statusCode == 200) {
@@ -60,6 +60,10 @@ class RegisterActivity : AppCompatActivity() {
                     }
                 }
 
+                override fun onFailure(call: Call<RegisterResponse?>, t: Throwable) {
+                    Log.d("RegisterActivity","Failed Register: ${t.message}")
+                    Toast.makeText(this@RegisterActivity, t.message, Toast.LENGTH_LONG).show()
+                }
             })
 
         }
@@ -80,6 +84,10 @@ class RegisterActivity : AppCompatActivity() {
             }
             inputLayout(R.id.PasswordInput) {
                 isNotEmpty().description("Please enter your password.")
+            }
+            inputLayout(R.id.ConfirmPasswordInput) {
+                isNotEmpty().description("Please enter your password.")
+                compareWith(findViewById(R.id.PasswordInput)).description("Password does not match.")
             }
             submitWith(R.id.SubmitButton) { result ->
                 // Button was clicked and form is completely valid!

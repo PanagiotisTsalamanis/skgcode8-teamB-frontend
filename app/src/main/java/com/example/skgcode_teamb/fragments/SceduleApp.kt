@@ -21,6 +21,7 @@ import com.example.skgcode_teamb.models.ScheduleAppResponse
 import com.example.skgcode_teamb.storage.SessionManager
 import com.example.skgcode_teamb.utils.DateFormatter
 import com.google.android.material.datepicker.MaterialDatePicker
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import retrofit2.Call
@@ -42,6 +43,8 @@ class SceduleApp : Fragment() {
     private var pickTime = arrayListOf<ArrayList<String>>()
     private var itemPosition : Int? = null
     private var itemPosition1 : Int? = null
+
+    private var timeSelection : Int? = null
 
     private var readyToSchedule : Boolean = false
 
@@ -69,12 +72,12 @@ class SceduleApp : Fragment() {
         val HospitalInputLayout : TextInputLayout = view.findViewById(R.id.hospitalInputLayout)
         val DepartmentsInputLayout : TextInputLayout = view.findViewById(R.id.departmentInputLayout)
         val DateList : TextInputEditText = view.findViewById(R.id.dateList)
-        val timeList : TextInputLayout = view.findViewById(R.id.timeInputLayout)
+        //val timeList : TextInputLayout = view.findViewById(R.id.timeInputLayout)
 
         // Edit text
         val hospitalIdText : AutoCompleteTextView = view.findViewById(R.id.hospitalList)
         val departmentText : AutoCompleteTextView = view.findViewById(R.id.departmentList)
-        val dateTimeText : AutoCompleteTextView = view.findViewById(R.id.timeList)
+        //val dateTimeText : AutoCompleteTextView = view.findViewById(R.id.timeList)
         val dateText : TextInputEditText = view.findViewById(R.id.dateList)
 
 
@@ -132,11 +135,14 @@ class SceduleApp : Fragment() {
         }
 
 
-        val timeEditText : AutoCompleteTextView = view.findViewById(R.id.timeList)
+        //val timeEditText : AutoCompleteTextView = view.findViewById(R.id.timeList)
 
+        /*
         timeEditText.setOnItemClickListener{parent, view, position, id ->
             itemPosition1 = position
         }
+
+         */
 
 
 
@@ -167,80 +173,6 @@ class SceduleApp : Fragment() {
             DateList.setText(datePickerFormattedSelection)
 
         }
-
-        // Search Availability Request
-
-        fun searchAppointment() {
-
-            val apiCall = RetrofitClient.getRetrofitInstance.searchAppointment(
-                token = "JWT ${sessionManager.fetchAuthToken()}",
-                hospitalId, department, date
-            )
-
-            apiCall.enqueue(object : Callback<List<String>?> {
-                override fun onResponse(
-                    call: Call<List<String>?>,
-                    response: Response<List<String>?>
-                ) {
-
-                    val statusCode = response.raw().code()
-
-                    if (statusCode == 200) {
-                        Log.d("BookAppointment", "Success: $statusCode")
-                        Toast.makeText(requireContext(), "You can choose time", Toast.LENGTH_LONG).show()
-
-                        val responseBody = response.body()!!
-
-                        Log.d("ScheduleFragment", "Availability: $responseBody")
-
-                        timeList.setEnabled(true)
-
-                        responseBody.forEach{
-                            availableHours.add(it)
-                        }
-
-                        val parser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ")
-                        val formatter = SimpleDateFormat("h:mm a")
-                        formatter.timeZone = TimeZone.getTimeZone("UTC")
-
-                        //val singleChange = formatter.format(parser.parse(availableHours[2]))
-                        //Log.d("ScheduleAppointment", "Single change: ${availableHours[2]}, $singleChange")
-
-                        responseBody.forEach {
-                            availableHoursFormatted.add(formatter.format(parser.parse(it)))
-                        }
-
-
-                        Log.d("ScheduleFragment", "Formatted time: $availableHoursFormatted")
-
-
-
-                        Log.d("ScheduleFragment", "Availability: $availableHours")
-
-                        val HoursInputLayout : TextInputLayout = view.findViewById(R.id.timeInputLayout)
-
-                        val items1 = availableHoursFormatted
-                        val adapter1 = ArrayAdapter(requireContext(), R.layout.list_item, items1)
-                        (HoursInputLayout.editText as? AutoCompleteTextView)?.setAdapter(adapter1)
-
-                        readyToSchedule = true
-
-                    } else {
-                        Log.d("BookAppointment", "Success or not: $statusCode")
-                        Toast.makeText( requireContext(), "No time available", Toast.LENGTH_LONG).show()
-                    }
-
-
-                }
-
-                override fun onFailure(call: Call<List<String>?>, t: Throwable) {
-                    Log.d("BookAppointment", "Failed Time: ${t.message}")
-                    Toast.makeText(requireContext(), t.message, Toast.LENGTH_LONG).show()
-                }
-            })
-
-        }
-
 
         // Schedule appointment
         fun scheduleAppointment() {
@@ -274,6 +206,120 @@ class SceduleApp : Fragment() {
             })
 
         }
+
+        // Search Availability Request
+
+        fun searchAppointment() {
+
+            val apiCall = RetrofitClient.getRetrofitInstance.searchAppointment(
+                token = "JWT ${sessionManager.fetchAuthToken()}",
+                hospitalId, department, date
+            )
+
+            apiCall.enqueue(object : Callback<List<String>?> {
+                override fun onResponse(
+                    call: Call<List<String>?>,
+                    response: Response<List<String>?>
+                ) {
+
+                    val statusCode = response.raw().code()
+
+                    if (statusCode == 200) {
+                        Log.d("BookAppointment", "Success: $statusCode")
+                        Toast.makeText(requireContext(), "You can choose time", Toast.LENGTH_LONG).show()
+
+                        val responseBody = response.body()!!
+
+                        Log.d("ScheduleFragment", "Availability: $responseBody")
+
+                        //timeList.setEnabled(true)
+
+                        responseBody.forEach{
+                            availableHours.add(it)
+                        }
+
+                        val parser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ")
+                        val formatter = SimpleDateFormat("h:mm a")
+                        formatter.timeZone = TimeZone.getTimeZone("UTC")
+
+                        //val singleChange = formatter.format(parser.parse(availableHours[2]))
+                        //Log.d("ScheduleAppointment", "Single change: ${availableHours[2]}, $singleChange")
+
+                        responseBody.forEach {
+                            availableHoursFormatted.add(formatter.format(parser.parse(it)))
+                        }
+
+
+                        Log.d("ScheduleFragment", "Formatted time: $availableHoursFormatted")
+
+
+
+                        Log.d("ScheduleFragment", "Availability: $availableHours")
+
+
+
+                        MaterialAlertDialogBuilder(requireActivity())
+                            .setTitle("Select time")
+                            // Single-choice items (initialized with checked item)
+                            .setSingleChoiceItems(availableHoursFormatted.toTypedArray(), 0) { dialog, which ->
+                                timeSelection = which
+
+                            }
+                            .setNeutralButton("Cancel") { dialog, which ->
+                                // Respond to neutral button press
+                                availableHours = arrayListOf<String>()
+                                availableHoursFormatted = arrayListOf<String>()
+
+                            }
+                            .setPositiveButton("Schedule appointment") { dialog, which ->
+                                // Respond to positive button press
+
+                                hospitalId = hospitalIds[itemPosition!!]
+                                department = departmentText.text.toString().trim()
+                                dateTime = availableHours[timeSelection!!]
+
+                                Log.d("ScheduleAppointment", "Schedule Selectio: $hospitalId, $department, $timeSelection")
+
+
+                                scheduleAppointment()
+
+
+                            }
+
+                            .show()
+
+
+
+                        /*
+
+                        val HoursInputLayout : TextInputLayout = view.findViewById(R.id.timeInputLayout)
+
+                        val items1 = availableHoursFormatted
+                        val adapter1 = ArrayAdapter(requireContext(), R.layout.list_item, items1)
+                        (HoursInputLayout.editText as? AutoCompleteTextView)?.setAdapter(adapter1)
+
+                        readyToSchedule = true
+
+                         */
+
+                    } else {
+                        Log.d("BookAppointment", "Success or not: $statusCode")
+                        Toast.makeText( requireContext(), "No time available", Toast.LENGTH_LONG).show()
+                    }
+
+
+                }
+
+                override fun onFailure(call: Call<List<String>?>, t: Throwable) {
+                    Log.d("BookAppointment", "Failed Time: ${t.message}")
+                    Toast.makeText(requireContext(), t.message, Toast.LENGTH_LONG).show()
+                }
+            })
+
+        }
+
+
+
 
         /*
         val submitButton : Button = view.findViewById(R.id.BookAppointment)
@@ -310,6 +356,22 @@ class SceduleApp : Fragment() {
 
             submitWith(view.findViewById(R.id.BookAppointment)) { result ->
 
+                if (itemPosition != null) {
+                    hospitalId = hospitalIds[itemPosition!!]
+                }
+
+                hospitalNameTest = hospitalIdText.text.toString().trim()
+                department = departmentText.text.toString().trim()
+
+                val parser = SimpleDateFormat("MMMM dd, yyyy", Locale.UK)
+                val formatter = SimpleDateFormat("yyyy-MM-dd")
+                val formattedDate = formatter.format(parser.parse(dateText.text.toString()))
+
+                date = formattedDate
+
+                searchAppointment()
+
+                /*
                 if (readyToSchedule == false) {
 
                     if (itemPosition != null) {
@@ -344,10 +406,15 @@ class SceduleApp : Fragment() {
                     Log.d("ScheduleAppointment", "Available hours: $availableHours")
                     Log.d("ScheduleAppointment", "Available hours formatted: $availableHoursFormatted")
 
+
+
+
                     scheduleAppointment()
 
 
                 }
+
+                 */
 
             }
         }

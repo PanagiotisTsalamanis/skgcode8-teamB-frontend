@@ -4,9 +4,9 @@ import com.google.gson.annotations.SerializedName
 
 data class Doctor(
     @SerializedName("id")
-    val id: String?,
+    val id: String,
     @SerializedName("firstName")
-    val firstName: String?,
+    val firstName: String,
     @SerializedName("lastName")
-    val lastName: String?
+    val lastName: String
 )

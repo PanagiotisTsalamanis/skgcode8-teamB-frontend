@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.afollestad.vvalidator.util.hide
 import com.example.skgcode_teamb.R
 import com.example.skgcode_teamb.databinding.FragmentHomeBinding
 import com.example.skgcode_teamb.storage.SessionManager
@@ -26,7 +27,13 @@ class Home : Fragment() {
 
 
         val firstName: TextView = view.findViewById(R.id.textView6)
-        firstName.setText(sessionManager.getUserDetails().firstName)
+
+        if (sessionManager.getUserDetails().firstName != null) {
+            firstName.setText(sessionManager.getUserDetails().firstName)
+        } else {
+            firstName.hide()
+        }
+
 
 
 
