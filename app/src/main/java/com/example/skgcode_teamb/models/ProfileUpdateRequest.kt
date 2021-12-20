@@ -16,5 +16,7 @@ data class ProfileUpdateRequest(
     @SerializedName("birthDate")
     val birthDate: String?,
     @SerializedName("bloodType")
-    val bloodType: String?
+    val bloodType: String?,
+    @SerializedName("familyDoctor")
+    val familyDoctor: Doctor?
 )

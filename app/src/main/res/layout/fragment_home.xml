@@ -1,25 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activities.HomePa">
+    android:layout_height="match_parent">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activities.HomePa"
+    android:padding="20dp">
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="178dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_medium"
         android:text="Welcome"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textSize="20sp"
         android:textColor="#000000"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnPrescriptions"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textAppearance="?attr/textAppearanceHeadline4"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="First name"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnPrescriptions"/>
+
+
+
+<!--
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/PerCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="4dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="22dp"
+                    android:paddingBottom="22dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Prescriptions"
+                        android:layout_gravity="center"
+                        android:textAppearance="?attr/textAppearanceHeadline3"
+                        android:textColor="#0E4577"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:letterSpacing="0"
+                        android:textSize="22dp"/>
+
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/docum"
+                        android:layout_gravity="center"/>
+
+
+                </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    -->
+
+
+
+
+
 
     <Button
         android:id="@+id/btnPrescriptions"
@@ -31,10 +99,12 @@
         android:drawableRight="@drawable/docum"
         android:ems="10"
         android:fontFamily="@font/poppins_medium"
+        android:gravity="left|center_vertical"
         android:shadowColor="#0E4577"
         android:text="Prescriptions"
         android:textColor="#0E4577"
-        android:textSize="16sp"
+        android:textSize="18sp"
+        android:letterSpacing="0"
         app:layout_constraintBottom_toTopOf="@+id/btnDiagnosesHistory"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -44,6 +114,7 @@
         android:layout_width="320dp"
         android:layout_height="75dp"
         android:layout_marginBottom="26dp"
+        android:gravity="left|center_vertical"
         android:background="@drawable/btn_passwords"
         style="@style/Widget.App.Button"
         android:drawableRight="@drawable/scope"
@@ -52,7 +123,8 @@
         android:shadowColor="#0E4577"
         android:text="Diagnoses History"
         android:textColor="#0E4577"
-        android:textSize="16sp"
+        android:textSize="18sp"
+        android:letterSpacing="0"
         app:layout_constraintBottom_toTopOf="@+id/btnAppointments"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -62,6 +134,7 @@
         android:layout_width="320dp"
         android:layout_height="75dp"
         android:layout_marginBottom="26dp"
+        android:gravity="left|center_vertical"
         android:background="@drawable/btn_passwords"
         style="@style/Widget.App.Button"
         android:drawableRight="@drawable/healt"
@@ -70,7 +143,8 @@
         android:shadowColor="#0E4577"
         android:text="Appointments"
         android:textColor="#0E4577"
-        android:textSize="16sp"
+        android:textSize="18sp"
+        android:letterSpacing="0"
         app:layout_constraintBottom_toTopOf="@+id/btnScheduleAppointment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -80,6 +154,7 @@
         android:layout_width="320dp"
         android:layout_height="75dp"
         android:layout_marginBottom="26dp"
+        android:gravity="left|center_vertical"
         android:background="@drawable/btn_passwords"
         style="@style/Widget.App.Button"
         android:drawableRight="@drawable/calenda"
@@ -88,7 +163,8 @@
         android:shadowColor="#0E4577"
         android:text="Schedule Appointment"
         android:textColor="#0E4577"
-        android:textSize="16sp"
+        android:textSize="18sp"
+        android:letterSpacing="0"
         app:layout_constraintBottom_toTopOf="@+id/btnUserProfile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -98,6 +174,7 @@
         android:layout_width="320dp"
         android:layout_height="75dp"
         android:layout_marginBottom="55dp"
+        android:gravity="left|center_vertical"
         android:background="@drawable/btn_passwords"
         style="@style/Widget.App.Button"
         android:drawableRight="@drawable/vecto"
@@ -106,8 +183,11 @@
         android:shadowColor="#0E4577"
         android:text="User Profile"
         android:textColor="#0E4577"
-        android:textSize="16sp"
+        android:textSize="18sp"
+        android:letterSpacing="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>

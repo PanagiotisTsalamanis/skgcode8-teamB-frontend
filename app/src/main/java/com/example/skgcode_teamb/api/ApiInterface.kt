@@ -39,14 +39,20 @@ interface ApiInterface {
         @Body passwordUpdateRequest: PasswordUpdateRequest
     ): Call<ProfileUpdateResponse>
 
-    // Prescriptions: https://skgcode8-teamb-backend.herokuapp.com/services/prescriptions
+    // Prescriptions history: https://skgcode8-teamb-backend.herokuapp.com/services/prescriptions
     @GET("services/prescriptions")
     fun userPrescriptions(
         @Header("Authorization") token: String
     ): Call<List<Prescription>>
 
+    // Diagnoses history: https://skgcode8-teamb-backend.herokuapp.com/services/diagnoses
+    @GET("services/diagnoses")
+    fun userDiagnoses(
+        @Header("Authorization") token: String
+    ): Call<List<Diagnosis>>
+
     // Appointments history: https://skgcode8-teamb-backend.herokuapp.com/services/appointments
-    @GET("appointments")
+    @GET("services/appointments")
     fun userAppointments(
         @Header("Authorization") token: String
     ): Call<List<Appointments>>
@@ -56,5 +62,27 @@ interface ApiInterface {
     fun hospitals(
         @Header("Authorization") token: String
     ): Call<List<Hospitals>>
+
+    // All doctors: https://skgcode8-teamb-backend.herokuapp.com/doctors
+    @GET("doctors")
+    fun doctors(
+        @Header("Authorization") token: String
+    ): Call<List<Doctors>>
+
+    // Appointments Search Availability: https://skgcode8-teamb-backend.herokuapp.com/services/appointments/available
+    @GET("services/appointments/available")
+    fun searchAppointment(
+        @Header("Authorization") token: String,
+        @Query("hospitalId") hospitalId: String,
+        @Query("department") department: String,
+        @Query("date") date: String
+    ): Call<List<String>>
+
+    // Schedule Appointment: https://skgcode8-teamb-backend.herokuapp.com/services/appointments
+    @POST("services/appointments")
+    fun scheduleAppointment(
+        @Header("Authorization") token: String,
+        @Body scheduleAppRequest: ScheduleAppRequest
+    ): Call<ScheduleAppResponse>
 
 }

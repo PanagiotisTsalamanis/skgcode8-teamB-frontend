@@ -12,11 +12,13 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.skgcode_teamb.R
+import com.example.skgcode_teamb.activities.HomePa
 import com.example.skgcode_teamb.adapters.PrescriptionAdapter
 import com.example.skgcode_teamb.api.RetrofitClient
 import com.example.skgcode_teamb.models.Hospitals
 import com.example.skgcode_teamb.models.Prescription
 import com.example.skgcode_teamb.storage.SessionManager
+import com.example.skgcode_teamb.utils.DateFormatter
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import retrofit2.Call
 import retrofit2.Callback
@@ -37,6 +39,9 @@ class Prescripti : Fragment(), PrescriptionAdapter.OnItemClickListener {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_prescripti, container, false)
 
+        // Set fragment title
+        (activity as HomePa).supportActionBar?.title = "Prescriptions history"
+
         // Define session manager
         val sessionManager = SessionManager(this.context)
 
@@ -50,14 +55,14 @@ class Prescripti : Fragment(), PrescriptionAdapter.OnItemClickListener {
                     call: Call<List<Prescription>>,
                     response: Response<List<Prescription>>
                 ) {
-                    val responseBody = response.body()!!
+                    val responseBody = response.body()!!.sortedByDescending { it.date }
 
                     val recView : RecyclerView = view!!.findViewById(R.id.Prescription_Recycler_View)
 
                     recView.apply {
                         setHasFixedSize(true)
                         layoutManager = LinearLayoutManager(this.context)
-                        adapter = PrescriptionAdapter(response.body()!!, this@Prescripti)
+                        adapter = PrescriptionAdapter(responseBody, this@Prescripti)
                     }
 
                 }
@@ -75,24 +80,19 @@ class Prescripti : Fragment(), PrescriptionAdapter.OnItemClickListener {
 
             val apiCall = RetrofitClient.getRetrofitInstance.hospitals(token = "JWT ${sessionManager.fetchAuthToken()}")
 
-            apiCall.enqueue(object : Callback<List<Hospitals>?> {
+            apiCall.enqueue(object : Callback<List<Hospitals>> {
                 override fun onResponse(
-                    call: Call<List<Hospitals>?>,
-                    response: Response<List<Hospitals>?>
+                    call: Call<List<Hospitals>>,
+                    response: Response<List<Hospitals>>
                 ) {
 
                     val responseBody = response.body()!!
 
-                    val hospitalNamesList = arrayListOf<String>()
-                    val hospitalEmailsList = arrayListOf<String>()
-
                     responseBody.forEach{
-                        hospitalNamesList.add(it.name)
-                        hospitalEmailsList.add(it.email)
+                        hospitalNames.add(it.name)
+                        hospitalEmails.add(it.email)
                     }
 
-                    hospitalNames = hospitalNamesList
-                    hospitalEmails = hospitalEmailsList
 
                 }
 
@@ -120,14 +120,11 @@ class Prescripti : Fragment(), PrescriptionAdapter.OnItemClickListener {
 
         val sessionManager = SessionManager(this.context)
 
-        val parser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
-        val formatter = SimpleDateFormat("MMMM dd, yyyy", Locale.UK)
-        val formattedDate = formatter.format(parser.parse(prescription.date))
+        val formattedDate = DateFormatter().apiDateToAppDate(prescription.date)
 
         val firstName = sessionManager.getUserDetails().firstName
         val lastName = sessionManager.getUserDetails().lastName
         val healthIdNumber = sessionManager.getUserDetails().healthIdNumber
-
 
         val emailSubject = "Prescription from $firstName $lastName"
         val userDetails = "First name: $firstName \n Last name: $lastName \n Health ID Number: $healthIdNumber"

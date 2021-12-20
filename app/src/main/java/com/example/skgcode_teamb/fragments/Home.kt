@@ -5,9 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.skgcode_teamb.R
 import com.example.skgcode_teamb.databinding.FragmentHomeBinding
+import com.example.skgcode_teamb.storage.SessionManager
 
 
 class Home : Fragment() {
@@ -18,6 +20,16 @@ class Home : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
+
+        // Define session manager
+        val sessionManager = SessionManager(this.context)
+
+
+        val firstName: TextView = view.findViewById(R.id.textView6)
+        firstName.setText(sessionManager.getUserDetails().firstName)
+
+
+
         val nextBtn1 : Button = view.findViewById(R.id.btnPrescriptions)
         nextBtn1.setOnClickListener{
             val fragment = Prescripti()

@@ -21,4 +21,101 @@
     <string name="menu_slideshow">Slideshow</string>
 
 
+
+
+
+    <!-- General strings -->
+    <string name="healthID">Health Identification Number</string>
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="select_hospital">Select hospital</string>
+
+    <!-- Register screen -->
+    <string name="register_input_email">@string/email_address</string>
+    <string name="register_input_healthID">@string/healthID</string>
+    <string name="register_input_password">@string/password</string>
+    <string name="register_input_confirmPassword">@string/confirm_password</string>
+    <string name="register_checkbox_gdpr">I read and accept the terms and conditions.</string>
+    <string name="register_btn">Create account</string>
+    <string name="register_cta_login">Already a member? Sign up</string>
+
+    <!-- Login screen -->
+    <string name="login_input_healthID">@string/healthID</string>
+    <string name="login_input_password">@string/password</string>
+    <string name="login_btn">Sign in</string>
+    <string name="login_cta_forgotPass">Forgot password</string>
+    <string name="login_cta_register">New member? Sign up</string>
+
+    <!-- Welcome screen -->
+    <string name="welcome_mainTxt">Welcome</string>
+    <string name="welcome_prescriptions">Prescriptions</string>
+    <string name="welcome_diagnoses">Diagnoses History</string>
+    <string name="welcome_appointments">Appointments</string>
+    <string name="welcome_scheduleAppointments">Schedule Appointments</string>
+    <string name="welcome_profile">User profile</string>
+
+    <!-- Navigation menu -->
+    <string name="nav_menu">Menu</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_profile">User profile</string>
+    <string name="nav_services">Services</string>
+    <string name="nav_services_prescriptions">Prescriptions</string>
+    <string name="nav_services_diagnoses">Diagnoses</string>
+    <string name="nav_services_appointments">Appointments</string>
+    <string name="nav_services_scheduleAppointment">Schedule Appointment</string>
+
+    <!-- User profile screen -->
+    <string name="profile_input_firstName">First name</string>
+    <string name="profile_input_lastName">Last name</string>
+    <string name="profile_input_healthID">@string/healthID</string>
+    <string name="profile_input_birthDate">Date of birth</string>
+    <string name="profile_input_email">@string/email_address</string>
+    <string name="profile_input_phone">Phone number</string>
+    <string name="profile_input_bloodType">Blood type</string>
+    <string name="profile_input_familyDoctor">Family Doctor</string>
+
+    <!-- Prescriptions screen -->
+    <string name="prescription_issueDate">Issue date</string>
+    <string name="prescription_drugCode">Drug code</string>
+    <string name="prescription_title">Title</string>
+    <string name="prescription_description">Description</string>
+    <string name="prescription_doctor">Doctor</string>
+    <string name="prescription_cta_share">Share prescription</string>
+    <string name="prescription_selectHospital">@string/select_hospital</string>
+
+    <!-- Diagnoses screen -->
+    <string name="diagnosis_date">Date</string>
+    <string name="diagnosis_title">Title</string>
+    <string name="diagnosis_result">Result</string>
+    <string name="diagnosis_doctor">Doctor</string>
+    <string name="diagnosis_cta_share">Share diagnosis</string>
+    <string name="diagnosis_selectHospital">@string/select_hospital</string>
+
+    <!-- Appointments screen -->
+    <string name="appointment_hospital">Hospital</string>
+    <string name="appointment_department">Department</string>
+    <string name="appointment_description">Description</string>
+    <string name="appointment_statusUpcoming">Upcoming</string>
+    <string name="appointment_statusCompleted">Completed</string>
+
+    <!-- Schedule appointment screen -->
+    <string name="schedule_input_date">Date of appointment</string>
+    <string name="schedule_input_timeSlot">Time</string>
+    <string name="schedule_input_hospital">Hospital</string>
+    <string name="schedule_input_department">Department</string>
+    <string name="schedule_input_doctor">Select doctor</string>
+    <string name="schedule_btn">Schedule appointment</string>
+
+    <!-- Form Validation errors -->
+    <string name="validation_healthId_not_empty">Please enter your health ID number.</string>
+    <string name="validation_healthId_length">Health ID must be exactly 11 digits.</string>
+    <string name="validation_email_not_empty">Please enter your email address.</string>
+    <string name="validation_email">Please enter a valid email address.</string>
+    <string name="validation_password_not_empty">Please enter your password.</string>
+    <string name="validation_password_length">Your password must be at least 8 characters.</string>
+    <string name="validation_conf_pw_not_empty">Please confirm your password.</string>
+    <string name="validation_conf_pw_not_match">Password does not match.</string>
+
+
 </resources>

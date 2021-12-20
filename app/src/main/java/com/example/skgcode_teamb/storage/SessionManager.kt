@@ -10,7 +10,7 @@ import com.example.skgcode_teamb.models.ProfileUpdateRequest
  * Session manager to save and fetch data from SharedPreferences
  */
 class SessionManager (var context: Context?) {
-    private var prefs: SharedPreferences = context!!.getSharedPreferences(context!!.getString(R.string.app_name), Context.MODE_PRIVATE)
+    private var prefs: SharedPreferences = context!!.getSharedPreferences("health_app", Context.MODE_PRIVATE)
 
     companion object {
         // All Shared Preferences Keys
@@ -24,7 +24,8 @@ class SessionManager (var context: Context?) {
         const val BIRTH_DATE = "birth_date"
         const val BLOOD_TYPE = "blood_type"
         const val FAMILY_DOCTOR_ID = "family_doctor_id"
-        const val FAMILY_DOCTOR_NAME = "family_doctor_name"
+        const val FAMILY_DOCTOR_FIRST_NAME = "family_doctor_first_name"
+        const val FAMILY_DOCTOR_LAST_NAME = "family_doctor_last_name"
     }
 
     /**
@@ -50,8 +51,8 @@ class SessionManager (var context: Context?) {
         editor.putString(BIRTH_DATE, loginResponse.user.birthDate)
         editor.putString(BLOOD_TYPE, loginResponse.user.bloodType)
         editor.putString(FAMILY_DOCTOR_ID, loginResponse.user.familyDoctor.id)
-        editor.putString(FAMILY_DOCTOR_NAME, "${loginResponse.user.familyDoctor.firstName} ${loginResponse.user.familyDoctor.lastName}")
-
+        editor.putString(FAMILY_DOCTOR_FIRST_NAME, loginResponse.user.familyDoctor.firstName)
+        editor.putString(FAMILY_DOCTOR_LAST_NAME, loginResponse.user.familyDoctor.lastName)
 
         // Apply changes
         editor.apply()
@@ -71,6 +72,9 @@ class SessionManager (var context: Context?) {
         editor.putString(PHONE_NUMBER, profileUpdateRequest.phoneNumber)
         editor.putString(BIRTH_DATE, profileUpdateRequest.birthDate)
         editor.putString(BLOOD_TYPE, profileUpdateRequest.bloodType)
+        editor.putString(FAMILY_DOCTOR_ID, profileUpdateRequest.familyDoctor?.id)
+        editor.putString(FAMILY_DOCTOR_FIRST_NAME, profileUpdateRequest.familyDoctor?.firstName)
+        editor.putString(FAMILY_DOCTOR_LAST_NAME, profileUpdateRequest.familyDoctor?.lastName)
 
         // Apply changes
         editor.apply()
@@ -120,9 +124,10 @@ class SessionManager (var context: Context?) {
         val birthDate = prefs.getString(BIRTH_DATE, null)
         val bloodType = prefs.getString(BLOOD_TYPE, null)
         val familyDoctorId = prefs.getString(FAMILY_DOCTOR_ID, null)
-        val familyDoctorName = prefs.getString(FAMILY_DOCTOR_NAME, null)
+        val familyDoctorFirstName = prefs.getString(FAMILY_DOCTOR_FIRST_NAME, null)
+        val familyDoctorLastName = prefs.getString(FAMILY_DOCTOR_LAST_NAME, null)
 
-        return SessionUserDetails(healthIdNumber, firstName, lastName, email, phoneNumber, birthDate, bloodType, familyDoctorId, familyDoctorName)
+        return SessionUserDetails(healthIdNumber, firstName, lastName, email, phoneNumber, birthDate, bloodType, familyDoctorId, familyDoctorFirstName, familyDoctorLastName)
     }
 
 

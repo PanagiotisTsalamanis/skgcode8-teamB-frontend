@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.skgcode_teamb.R
 import com.example.skgcode_teamb.models.Prescription
+import com.example.skgcode_teamb.utils.DateFormatter
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -40,12 +41,8 @@ class PrescriptionAdapter(
         private val btnShare:Button = itemView.findViewById(R.id.PerShareBtn)
 
         fun bind(prescription: Prescription) {
-            // Format Date
-            val parser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
-            val formatter = SimpleDateFormat("MMMM dd, yyyy", Locale.UK)
-            val formattedDate = formatter.format(parser.parse(prescription.date))
 
-            date.text = formattedDate
+            date.text = DateFormatter().apiDateToAppDate(prescription.date)
             title.text = prescription.title
             description.text = prescription.description
             drugCode.text = prescription.drugCode

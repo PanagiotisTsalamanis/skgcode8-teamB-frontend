@@ -8,8 +8,10 @@
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/drawable/calendar.xml" value="0.2703125" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/drawable/custom_input.xml" value="0.2703125" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/drawable/gradient_bg.xml" value="0.2703125" />
+        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/drawable/ic_baseline_calendar_today_24.xml" value="0.2703125" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/activity_home.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/activity_home_pa.xml" value="0.19655797101449277" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/activity_prescriptions.xml" value="0.24365942028985507" />
@@ -17,15 +19,19 @@
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/activity_register.xml" value="0.24728260869565216" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/activity_sign_up.xml" value="0.2296195652173913" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/alert_dialog_scrollable.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/content_main.xml" value="0.20742753623188406" />
-        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/fragment_home.xml" value="0.22056159420289856" />
-        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/fragment_prescripti.xml" value="0.2" />
-        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/fragment_scedule_app.xml" value="0.22056159420289856" />
-        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/fragment_user_profile.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/content_main.xml" value="0.22735507246376813" />
+        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/fragment_appointments.xml" value="0.22327898550724637" />
+        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/fragment_diagnoses.xml" value="0.21920289855072464" />
+        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/fragment_prescripti.xml" value="0.23505434782608695" />
+        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/fragment_scedule_app.xml" value="0.264" />
+        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/fragment_user_profile.xml" value="0.24230072463768115" />
         <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/list_item.xml" value="0.17889492753623187" />
-        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/navigation_header.xml" value="0.22056159420289856" />
-        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/row_item_prescription.xml" value="0.4" />
-        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/menu/navigation_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/navigation_header.xml" value="0.22735507246376813" />
+        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/row_item_appointments.xml" value="0.264" />
+        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/row_item_diagnosis.xml" value="0.4" />
+        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/layout/row_item_prescription.xml" value="0.264" />
+        <entry key="..\:/Users/tsala/AndroidStudioProjects/skgcodeteamb/app/src/main/res/menu/navigation_menu.xml" value="0.25025641025641027" />
         <entry key="..\:/Users/tsala/AppData/Local/Android/Sdk/platforms/android-31/android.jar!/res/layout/alert_dialog.xml" value="0.25416666666666665" />
       </map>
     </option>

@@ -8,6 +8,7 @@ class DateFormatter {
 
     private val apiDateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
     private val appDateFormat = "MMMM dd, yyyy"
+    private val appTimeFormat = "h:mm a"
 
     // Convert Api Date format to App Date format
     @SuppressLint("SimpleDateFormat")
@@ -25,6 +26,15 @@ class DateFormatter {
         parser.timeZone = TimeZone.getTimeZone("UTC")
 
         return parser.parse(api_date)!!.time
+    }
+
+    // Convert Api Time format to App Time format
+    @SuppressLint("SimpleDateFormat")
+    fun apiTimeToAppTime(api_time: String): String {
+        val parser = SimpleDateFormat(apiDateFormat)
+        val formatter = SimpleDateFormat(appTimeFormat, Locale.UK)
+
+        return formatter.format(parser.parse(api_time)!!)
     }
 
     // Convert App Date format to Api Date format

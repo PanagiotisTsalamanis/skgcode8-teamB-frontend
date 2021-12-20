@@ -175,7 +175,7 @@
                         android:id="@+id/PerDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Description"
+                        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
                         android:textAppearance="?attr/textAppearanceBody1"
                         android:fontFamily="@font/poppins_medium"
                         android:letterSpacing="0"
